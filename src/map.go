@@ -3,19 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	dict := map[string]int {
+	dict := map[string]int{
 		"foo": 1,
 		"bar": 2,
 	}
 
 	fmt.Println(dict)
-	v, ok := dict["foo"]
-	if ok {
+
+	if v, ok := dict["foo"]; ok {
 		fmt.Println("foo exists in map. value", v)
 	}
 
-	v, ok = dict["taccisum"]
-	if !ok {
+	if v, ok := dict["taccisum"]; !ok {
 		fmt.Println("taccisum does not exist in map. value", v)
 	}
 

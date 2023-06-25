@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/cristalhq/jwt/v5"
+	"github.com/cristalhq/jwt/v5" // external package
 
-	bar "main/pkg/bar"
+	bar "main/pkg/bar" // internal package
 )
 
 func main() {

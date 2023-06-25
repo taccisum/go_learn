@@ -53,5 +53,5 @@ func main() {
 	fmt.Println("Cat.Name():", na.Name())
 
 	na = create(3)
-	fmt.Println("Boxing example:", na, na == nil) // 由于触发了装箱，这里拿到的结果与 nil 直接比较会返回 false
+	fmt.Println("Boxing result:", na, ". na == nil:", na == nil) // 由于触发了装箱，这里拿到的结果与 nil 直接比较会返回 false
 }

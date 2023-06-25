@@ -5,7 +5,7 @@ import "fmt"
 type Foo struct {
 	Int int
 	Str string
-	Bar Bar
+	Bar // 类型嵌入
 }
 
 type Bar struct {
@@ -13,13 +13,14 @@ type Bar struct {
 }
 
 func main() {
-	foo := Foo {
+	foo := Foo{
 		Int: 1,
 		Str: "hello",
-		Bar: Bar {
+		Bar: Bar{
 			Bool: true,
 		},
 	}
-	fmt.Println(foo)
-	fmt.Println(foo.Bar.Bool)
+	fmt.Println("foo:", foo)
+	fmt.Println("foo.Bar.Bool:", foo.Bar.Bool)
+	fmt.Println("foo.Bool:", foo.Bool)
 }

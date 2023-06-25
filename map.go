@@ -14,8 +14,13 @@ func main() {
 		fmt.Println("foo exists in map. value", v)
 	}
 
-	_, ok = dict["taccisum"]
+	v, ok = dict["taccisum"]
 	if !ok {
-		fmt.Println("taccisum does not exist in map.")
+		fmt.Println("taccisum does not exist in map. value", v)
+	}
+
+	fmt.Println("foreach map...")
+	for k, v := range dict {
+		fmt.Println("key", k, "value", v)
 	}
 }

@@ -9,8 +9,17 @@ type Person struct {
 	LastName  string
 }
 
+type Cat struct {
+	Master   string
+	NickName string
+}
+
 func (p *Person) Name() string {
 	return p.FirstName + " " + p.LastName
+}
+
+func (c *Cat) Name() string {
+	return fmt.Sprintf("%s's %s", c.Master, c.NickName)
 }
 
 type NameAware interface {
@@ -24,5 +33,10 @@ func main() {
 		LastName:  "cisum",
 	}
 
+	fmt.Println(na.Name())
+	na = &Cat{
+		Master:   "taccisum",
+		NickName: "jasmine",
+	}
 	fmt.Println(na.Name())
 }

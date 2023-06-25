@@ -4,10 +4,15 @@ import (
 	"fmt"
 
 	"github.com/cristalhq/jwt/v5"
+
+	bar "main/pkg/bar"
 )
 
 func main() {
-	fmt.Println("hello mod.")
+	Sayhello()
+	bar.Sayhello()
+	bar.SayGoodbye()
+
 	key := []byte(`secret`)
 	signer, err := jwt.NewSignerHS(jwt.HS256, key)
 	fmt.Println(err)

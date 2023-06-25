@@ -31,8 +31,9 @@ func main() {
 	(&s).ptrPrint()
 
 	ws := MyWrapper{Str: "wrap"}
-	fmt.Println(ws.wrap().Str) // 传递 copy
-	fmt.Println(ws.Str)        // 原对象值未被修改
-	(&ws).wrap1()              // 传递指针
-	fmt.Println(ws.Str)        // 原对象值被修改
+	fmt.Println(ws.wrap().Str)    // 传递 copy
+	fmt.Println((&ws).wrap().Str) // 传递 copy
+	fmt.Println(ws.Str)           // 原对象值未被修改
+	(&ws).wrap1()                 // 传递指针
+	fmt.Println(ws.Str)           // 原对象值被修改
 }
